@@ -1,0 +1,10 @@
+  @mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  @mixin row {
+    display: flex;
+    flex-direction: row;
+  }

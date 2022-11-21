@@ -1,4 +1,8 @@
+@import '../../utils/colors.scss';
+@import '../../utils/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+@import '../../utils/reset.scss';
+
 
 * {
     font-size: 14px;
@@ -10,82 +14,80 @@
     user-select: none;
 }
 
-button {
-    all: unset;
-    cursor: pointer;
+form {
+    @include row;
 
+    .search {
+        width: 58px;
+    }
+}
+
+input {
+    color: white;
+    padding: 10px;
+    background-color: $button_unactive;
+    border: 1px solid rgba(228, 227, 227, 0.2);
+
+    &::placeholder {
+        color: $text;
+    }
 }
 
 select {
-    all: unset;
     appearance: auto;
-    color: #ffffff;
+    color: $text;
     padding: 0 14px;
     box-sizing: border-box;
 }
 
-form {
-    display: flex;
-    flex-direction: row;
-}
-
-input {
-    all: unset;
-    color: white;
-    padding: 10px;
-    background: rgba(76, 82, 85, 0.4);
-    border: 1px solid rgba(228, 227, 227, 0.2);
-
-}
-
 .header {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: space-between;
     align-items: center;
     padding: 3% 10%;
-    color: white;
+    color: $text;
 
-}
-
-.button {
-    height: 44px;
-    min-width: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(174, 181, 185, 0.5);
-    border-radius: 5px;
-}
-
-.language {
-    margin: 0 10px;
-    width: 71px;
-}
-
-.fah {
-    border-radius: 5px 0 0 5px;
-    background: rgba(76, 82, 85, 0.4);
-}
-
-.cel {
-    border-radius: 0 5px 5px 0;
-}
-
-.controllers {
-    display: flex;
-    flex-direction: row;
-}
-
-.bg-refresh {
-    background-image: url('../../assets/img/refresh.png');
-    background-repeat: no-repeat;
-
-    span {
-        content: url('../../assets/img/vector.svg');
+    .button {
+        @include center;
+        cursor: pointer;
+        height: 44px;
+        min-width: 44px;
+        background-color: $button_active;
+        border-radius: 5px;
     }
-}
 
-.search {
-    width: 58px;
+    .controllers {
+        display: flex;
+        flex-direction: row;
+
+        .bg-refresh {
+            background-image: url('../../assets/img/refresh.png');
+            background-repeat: no-repeat;
+
+            span {
+                content: url('../../assets/img/vector.svg');
+            }
+        }
+
+        .language {
+            margin: 0 10px;
+            width: 71px;
+        }
+
+        .temperature {
+            background: $button_unactive;
+        }
+
+        .fah {
+            border-radius: 5px 0 0 5px;
+        }
+
+        .cel {
+            border-radius: 0 5px 5px 0;
+        }
+
+        .active {
+            background: $button_active;
+        }
+    }
 }
