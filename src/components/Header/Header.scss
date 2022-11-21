@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 17.07px;
+    font-style: normal;
+    user-select: none;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+
+}
+
+select {
+    all: unset;
+    appearance: auto;
+    color: #ffffff;
+    padding: 0 14px;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    all: unset;
+    color: white;
+    padding: 10px;
+    background: rgba(76, 82, 85, 0.4);
+    border: 1px solid rgba(228, 227, 227, 0.2);
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 10%;
+    color: white;
+
+}
+
+.button {
+    height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(174, 181, 185, 0.5);
+    border-radius: 5px;
+}
+
+.language {
+    margin: 0 10px;
+    width: 71px;
+}
+
+.fah {
+    border-radius: 5px 0 0 5px;
+    background: rgba(76, 82, 85, 0.4);
+}
+
+.cel {
+    border-radius: 0 5px 5px 0;
+}
+
+.controllers {
+    display: flex;
+    flex-direction: row;
+}
+
+.bg-refresh {
+    background-image: url('../../assets/img/refresh.png');
+    background-repeat: no-repeat;
+
+    span {
+        content: url('../../assets/img/vector.svg');
+    }
+}
+
+.search {
+    width: 58px;
+}
