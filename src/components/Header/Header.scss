@@ -1,8 +1,7 @@
+@import '../../utils/reset.scss';
 @import '../../utils/colors.scss';
 @import '../../utils/mixins.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
-@import '../../utils/reset.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     font-size: 14px;
@@ -12,32 +11,6 @@
     line-height: 17.07px;
     font-style: normal;
     user-select: none;
-}
-
-form {
-    @include row;
-
-    .search {
-        width: 58px;
-    }
-}
-
-input {
-    color: white;
-    padding: 10px;
-    background-color: $button_unactive;
-    border: 1px solid rgba(228, 227, 227, 0.2);
-
-    &::placeholder {
-        color: $text;
-    }
-}
-
-select {
-    appearance: auto;
-    color: $text;
-    padding: 0 14px;
-    box-sizing: border-box;
 }
 
 .header {
@@ -57,8 +30,7 @@ select {
     }
 
     .controllers {
-        display: flex;
-        flex-direction: row;
+        @include row;
 
         .bg-refresh {
             background-image: url('../../assets/img/refresh.png');
@@ -70,6 +42,9 @@ select {
         }
 
         .language {
+            color: $text;
+            padding: 0 14px;
+            box-sizing: border-box;
             margin: 0 10px;
             width: 71px;
         }
@@ -88,6 +63,36 @@ select {
 
         .active {
             background: $button_active;
+        }
+    }
+
+    form {
+        @include row;
+        position: relative;
+
+        input {
+            color: $text;
+            padding: 10px;
+            background-color: $button_unactive;
+            border: 1px solid rgba(228, 227, 227, 0.2);
+            border-radius: 5px 0 0 5px;
+
+            &::placeholder {
+                color: $text;
+                font-weight: 300;
+            }
+        }
+
+        span {
+            content: url('../../assets/img/voice.svg');
+            position: absolute;
+            right: 38%;
+            top: 30%;
+        }
+
+        .search {
+            width: 101px;
+            border-radius: 0 5px 5px 0;
         }
     }
 }
